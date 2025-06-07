@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>KonsoleKorner - Commands</title>
+<style>
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin: 20px;
+    background: #f9f9f9;
+  }
+  .command-block {
+    background-color: #e0e0e0;
+    padding: 6px;
+    margin: 8px 0;
+    font-family: monospace;
+    border-radius: 4px;
+  }
+  button {
+    margin-left: 10px;
+  }
+  hr {
+    border: 1px solid #ccc;
+  }
+</style>
+<script>
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+      alert("Copied:\n" + text);
+    }, function(err) {
+      console.error("Failed to copy: ", err);
+    });
+  }
+</script>
+</head>
+<body>
+
+<h1>KonsoleKorner - Adding arch=amd64</h1>
+<hr>
+
+<p>1. Go to the sources directory:</p>
+<div class="command-block">
+  CD /ETC/APT/SOURCES.LIST.D/
+  <button onclick="copyToClipboard('CD /ETC/APT/SOURCES.LIST.D/')">Copy</button>
+</div>
+
+<p>2. List the files:</p>
+<div class="command-block">
+  LS
+  <button onclick="copyToClipboard('LS')">Copy</button>
+</div>
+
+<p>3. Open the source list file with nano:</p>
+<div class="command-block">
+  SUDO NANO /ETC/APT/SOURCES.LIST.D/
+  <button onclick="copyToClipboard('SUDO NANO /ETC/APT/SOURCES.LIST.D/')">Copy</button>
+</div>
+
+<p>4. Edit by adding <code>arch=amd64</code> where needed.</p>
+<p>5. Save and exit with <strong>Ctrl+X</strong>, then type ‘y’ & press Enter.</p>
+
+<p>6. Update package list:</p>
+<div class="command-block">
+  SUDO APT UPDATE
+  <button onclick="copyToClipboard('SUDO APT UPDATE')">Copy</button>
+</div>
+
+</body>
+</html>
