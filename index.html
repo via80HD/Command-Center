@@ -36,35 +36,40 @@
 </head>
 <body>
 
-<h1>KonsoleKorner - Adding arch=amd64</h1>
+<h1>KonsoleKorner</h1>
 <hr>
-
+<h1> - Adding arch=amd64</h1>
+<hr>
 <p>1. Go to the sources directory:</p>
 <div class="command-block">
-  CD /ETC/APT/SOURCES.LIST.D/
-  <button onclick="copyToClipboard('CD /ETC/APT/SOURCES.LIST.D/')">Copy</button>
+  cd /etc/apt/sources.list.d/
+  <button onclick="copyToClipboard('cd /etc/apt/sources.list.d/')">Copy</button>
 </div>
 
 <p>2. List the files:</p>
 <div class="command-block">
-  LS
-  <button onclick="copyToClipboard('LS')">Copy</button>
+  ls
+  <button onclick="copyToClipboard('ls')">Copy</button>
 </div>
 
 <p>3. Open the source list file with nano:</p>
 <div class="command-block">
-  SUDO NANO /ETC/APT/SOURCES.LIST.D/
-  <button onclick="copyToClipboard('SUDO NANO /ETC/APT/SOURCES.LIST.D/')">Copy</button>
+  sudo nano /etc/apt/sources.list.d/
+  <button onclick="copyToClipboard('sudo nano /etc/apt/sources.list.d/')">Copy</button>
 </div>
 
-<p>4. Edit by adding <code>arch=amd64</code> where needed.</p>
+<p>4. On the screen you are taken to, you will need to click the right arrow 5 times then type the following</p>
+<div class="command-block">
+arch=amd64 
+<button onclick="copyToClipboard('arch=amd64 ')">Copy</button>
+
 <p>5. Save and exit with <strong>Ctrl+X</strong>, then type ‘y’ & press Enter.</p>
 
 <p>6. Update package list:</p>
 <div class="command-block">
-  SUDO APT UPDATE
-  <button onclick="copyToClipboard('SUDO APT UPDATE')">Copy</button>
+  sudo apt update
+  <button onclick="copyToClipboard('sudo apt update')">Copy</button>
 </div>
-
+<hr>
 </body>
 </html>
